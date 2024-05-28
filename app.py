@@ -14,7 +14,7 @@ def sum_numbers():
         sum_result = float(num1) + float(num2)
         return render_template('index.html', result=sum_result, num1=num1, num2=num2)
     except ValueError:
-        return render_template('index.html', error="Invalid input. Please enter numbers.", num1=num1, num2=num2)
+        return render_template('index.html', error="Entrada no Válida, por favor Ingrese unicamente Números.", num1=num1, num2=num2)
 
 if __name__ == '__main__':
     app.run(debug=True)
