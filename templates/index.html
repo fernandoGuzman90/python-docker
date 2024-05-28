@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma de Números</title>
+</head>
+<body>
+    <h1>Calculadora de Suma</h1>
+    <form action="/sum" method="post">
+        <label for="num1">Número 1:</label>
+        <input type="text" id="num1" name="num1" value="{{ num1 if num1 else '' }}"><br><br>
+        <label for="num2">Número 2:</label>
+        <input type="text" id="num2" name="num2" value="{{ num2 if num2 else '' }}"><br><br>
+        <input type="submit" value="Calcular Suma">
+    </form>
+    {% if result is not none %}
+        <h2>Resultado: {{ result }}</h2>
+    {% endif %}
+    {% if error %}
+        <h2 style="color: red;">{{ error }}</h2>
+    {% endif %}
+</body>
+</html>
